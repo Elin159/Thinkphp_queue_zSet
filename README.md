@@ -1,4 +1,4 @@
-Thinkphp_queue_Elin
+# Thinkphp_queue_Elin
 
 描述
 
@@ -21,16 +21,16 @@ php artisan /Home/queue listen:name
 ### 例子:
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->push();
 
-###执行监听:
+### 执行监听:
 php artisan /Home/queue listen:email;
 
-###延迟执行:
+### 延迟执行:
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->delay(3)->push();
 
-###指定队列执行:
+### 指定队列执行:
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->delay(3)->onQueue('email')->push();
 
-####指定队列执行也可如此
+#### 指定队列执行也可如此
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']),'email')->delay(3)->push();
 队列业务流程
 
